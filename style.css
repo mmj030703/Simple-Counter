@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@550&display=swap');
+
+:root {
+    --primaryFont: 'Roboto', sans-serif;
+    --secondaryFont: 'Open Sans', sans-serif;
+    --letterSpacing: 0.25rem;
+    --primaryColor: #1c2f4d;
+    --secondaryColor: #222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+}
+
+.counter-container h1 {
+    font-family: var(--primaryFont);
+    color: #1c2f4d;
+    font-size: 2.9rem;
+    letter-spacing: var(--letterSpacing);
+}
+
+.counter-container p {
+    font-family: var(--secondaryFont);
+    color: var(--primaryColor);
+    font-size: 6rem;
+    margin: 20px 0px 10px 0px;
+}
+
+.counter-container .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.counter-container .buttons button {
+    font-size: .9rem;
+    text-transform: uppercase;
+    border: 2px solid var(--primaryColor);
+    background-color: transparent;
+    margin: 15px 15px 0px 0px;
+    letter-spacing: var(--letterSpacing);
+    padding: 7px 10px 7px 10px;
+    border-radius: 10px;
+    transition: all .4s ease-out;
+    cursor: pointer;
+}
+
+.counter-container .buttons button.increase {
+    margin: 15px 0px 0px 0px;
+}
+
+.counter-container .buttons button:hover {
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+
+@media screen and (max-width: 276px) {
+    .counter-container .buttons button {
+        margin: 15px 5px 0px 0px;
+    }
+}
